@@ -19,7 +19,7 @@ class BookList extends Component {
                             <th>Price</th>
                             <th>Category</th>
                             <th>Author</th>
-                            <th>Author</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>

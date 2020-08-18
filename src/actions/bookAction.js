@@ -29,3 +29,7 @@ export const createBook = (data) => async dispatch => {
         throw(error)
     })
 }
+
+export const removeBook = (id) => async dispatch => {
+    
+}
