@@ -23,3 +23,5 @@ ReactDOM.render(
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
+
+// tuitorial: https://medium.com/how-to-react/how-to-use-redux-in-your-react-app-with-axios-2327f581bf8a

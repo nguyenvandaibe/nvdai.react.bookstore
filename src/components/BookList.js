@@ -8,8 +8,6 @@ class BookList extends Component {
     }
     render() {
         const { books } = this.props.books;
-        console.log(books);
-
         return (
             <div>
                 <h1>Book list</h1>
@@ -27,7 +25,6 @@ class BookList extends Component {
                     <tbody>
                         {
                             books.map((book, index) => {
-                                console.log(book)
                                 return (
                                     <tr key={index} no={index}>
                                         <td>{index + 1}</td>
