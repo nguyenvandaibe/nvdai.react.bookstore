@@ -1,4 +1,4 @@
-import { FETCH_BOOKS } from "../actions/types";
+import { FETCH_BOOKS, CREATE_BOOK } from "../actions/types";
 
 const initialState = {
     books: [],
@@ -14,6 +14,10 @@ export default function (state = initialState, action) {
                 books: action.payload,
                 loading: false
             }
+
+        case CREATE_BOOK:
+            console.log(action);
+            return state;
         default:
             return state;
     }

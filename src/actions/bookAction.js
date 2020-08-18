@@ -1,15 +1,33 @@
-import { FETCH_BOOKS } from "./types";
+import { FETCH_BOOKS, CREATE_BOOK } from "./types";
 import axios from 'axios';
 
+const apiUrl = `https://localhost:44372/api/books`;
+
 export const fetchBooks = () => async dispatch => {
-    try {
-        const res = await axios.get(`https://localhost:44372/api/books`)
+
+    axios.get(apiUrl)
+    .then(res => {
         dispatch({
             type: FETCH_BOOKS,
             payload: res.data
         })
-    }
-    catch (e) {
-        throw (e);
-    }
+    })
+    .catch(err => {
+        throw(err);
+    })
+}
+
+let data = {Name:'Viet Nam su luoc', Price: 10, Category: 'History', Author: 'Tran Trong Kim'}
+
+export const createBook = (data) => async dispatch => {
+    axios.post(apiUrl, data)
+    .then(res => {
+        dispatch({
+            type: CREATE_BOOK,
+            payload: res.data
+        })
+    })
+    .catch (error => {
+        throw(error)
+    })
 }

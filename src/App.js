@@ -2,6 +2,7 @@ import React from 'react';
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import BookList from './components/BookList';
+import CreateBook from './components/CreateBook';
 
 function App() {
     return (
@@ -28,6 +29,7 @@ function App() {
                     </ul>
                 </div>
             </nav>
+            <CreateBook></CreateBook>
             <BookList></BookList>
         </div>
     );
