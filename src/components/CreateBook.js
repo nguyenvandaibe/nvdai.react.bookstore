@@ -9,7 +9,7 @@ class CreateBook extends Component {
     }
 
     onCreateSubmit() {
-        this.props.createBook();
+        this.props.createBook({Name:'Viet Nam su luoc', Price: 10, Category: 'History', Author: 'Tran Trong Kim'});
     }
 
     render() {
@@ -22,4 +22,5 @@ class CreateBook extends Component {
 }
 
 const mapStateToProps = (state) => ({ book: {} })
+
 export default connect(mapStateToProps, { createBook })(CreateBook);

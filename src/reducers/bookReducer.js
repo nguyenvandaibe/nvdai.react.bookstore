@@ -17,7 +17,11 @@ export default function (state = initialState, action) {
 
         case CREATE_BOOK:
             console.log(action);
-            return state;
+            
+            return {
+                ...state,
+                books: state.books.concat(action.payload)
+            };
         default:
             return state;
     }

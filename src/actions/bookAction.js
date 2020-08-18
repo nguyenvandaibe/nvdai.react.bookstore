@@ -17,8 +17,6 @@ export const fetchBooks = () => async dispatch => {
     })
 }
 
-let data = {Name:'Viet Nam su luoc', Price: 10, Category: 'History', Author: 'Tran Trong Kim'}
-
 export const createBook = (data) => async dispatch => {
     axios.post(apiUrl, data)
     .then(res => {
