@@ -27,13 +27,22 @@ class CreateBook extends Component {
         });
     }
 
-    onCreateSubmit() {
+    clearInput() {
+        document.getElementById('inputName').value='';
+        document.getElementById('inputPrice').value='';
+        document.getElementById('inputCategory').value='';
+        document.getElementById('inputAuthor').value='';
+    }
+
+    onCreateSubmit(e) {
+        e.preventDefault();
         this.props.createBook({
             Name: this.state.bookName,
             Price: this.state.bookPrice,
             Category: this.state.bookCategory,
             Author: this.state.bookAuthor
         });
+        this.clearInput();
     }
 
     render() {
